@@ -8,7 +8,6 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.Main;
-import db.DbIntegrityException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
@@ -179,7 +178,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 		
 		if(result.get() == ButtonType.OK) {
 			if(service == null) {
-				throw new IllegalStateException("Serviice was null");
+				throw new IllegalStateException("Service was null");
 			}
 			try {
 				service.remove(obj);
